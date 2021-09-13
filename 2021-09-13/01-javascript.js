@@ -1,0 +1,1 @@
+document.write("<p> Dies kommt aus der externen Datei. </p>");

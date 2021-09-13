@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datentypen</title>
+</head>
+<body>
+    <h1>Benutzen von Datentypen</h1>
+
+    <script>
+        var zahl = 1, zeichen = "1";
+        document.write("<p> var zahl = 1 <br> zeichen = \"1\" </p>");
+
+        var erg = zahl + zahl;
+        document.write("<p> zahl + zahl ergibt: ",erg, ".<\p>");
+
+        var erg = zeichen + zeichen; //ergibt 11 weil + auch Verkettungsoperator ist
+        document.write("<p> zeichen + zeichen ergibt: ",erg, ".<\p>");
+        
+        var erg = zahl + zeichen; //ergibt 11 weil + auch Verkettungsoperator ist
+        document.write("<p> zahl + zeichen ergibt: ",erg, ".<\p>");
+        
+        var erg = zeichen + zahl; //ergibt 11 weil + auch Verkettungsoperator ist
+        document.write("<p> zeichen + zahl ergibt: ",erg, ".<\p>");
+        
+        var erg = zeichen * zahl; //ergibt 1 weil Typkonvertierung wirkt und Rechenopeeration durchgeführt wird
+        document.write("<p> zeichen * zahl ergibt: ",erg, ".<\p>");
+
+        var erg = "1a" * zahl; //ergibt nan
+        document.write("<p> \"1\" * zahl ergibt: ",erg, ".<\p>");
+
+        var erg2; //undefined, kein wert zugewiesen
+        document.write("<p>erg2 ergibt: ", erg2, ".</p>");
+    </script>
+</body>
+</html>

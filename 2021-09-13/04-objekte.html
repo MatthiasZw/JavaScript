@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte</title>
+</head>
+<body>
+    <h1>Objekte</h1>
+
+    <script>
+
+        //Objekt Raumschiff anlegen
+
+        function Raumschiff(  schifsname, schiffsmodell ){
+
+            //Eigenschaften (Properties)
+
+            this.name= schifsname;
+            this.modell= schiffsmodell;
+            this.entfernung=0;
+
+            // Funktionalität (Methoden)
+
+            this.entfernen=function(lichtjahre){
+                this.entfernung += lichtjahre;
+                document.write(this.name + "===> aktuelle Reise" + lichtjahre + "Lichtjahre ===> Erdentfernung: " + this.entfernung + "Lichtjahre</br>");
+            }
+
+        }
+
+        function Person( p_name, p_vorname, geschlecht,lebensform){
+            this.name = p_name;
+            this.vorname=p_vorname;
+            this.geschlecht=geschlecht;
+            this.lebensform=lebensform;
+
+
+        }
+
+        var Kirk= new Person( "Kirk", "James", "männlich", "Mensch");
+
+
+        var Enterprice = new Raumschiff("U.S.S. >Enterprice", "NCC-1701");
+
+        var Janeway = new Person("Janeway", "Kathrin", "weiblich", "Mensch");
+
+        var Voyager = new Raumschiff( "U.S.S. Voyager", "NCC-74656");
+
+        console.log(Enterprice);
+
+        document.write('<p> Typ der Variablen "Enterprice":' +typeof(Enterprice)+ '</p>');
+
+        document.write('<p>', Enterprice.name, ', Modell:', Enterprice.modell, '</p>');
+            document.write('<p>', Enterprice.name, ', Modell:', Enterprice.modell, '</p>');
+
+    </script>
+
+</body>
+</html>

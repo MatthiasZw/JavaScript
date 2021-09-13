@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+</head>
+<body>
+    <h1>Funktionen</h1>
+    <h2>variable Parameter</h2>
+
+    <script>
+        function test(par1, par2){
+            document.write("<p> Parameter 1 mit dem Wert: " ,par1, "<br>");
+                document.write("Parameter 2 mit dem Wert: ", par2, "</p> <p>");
+
+                console.log(arguments);
+
+                for(let i= 2; i < arguments.length; i++) {
+                    document.write( "zusätzliche parameter:", (i -1), "mit dem wert:", arguments[i], "<br>" );
+                }
+                document.write("</p>");
+            }
+
+            test(2,2,5, "hans-martin", "herbert");
+    </script>
+
+    <h2>anonyme Funktionen</h2>
+
+    <script>
+
+        var quadrat = function(zahl){
+            return zahl * zahl;
+        }
+
+        document.write(quadrat(10), '</br>');
+
+        function tue_etwas(f){
+            return f(25);
+        }
+
+        document.write(tue_etwas(quadrat), '<br>');
+
+        document.write( tue_etwas(function(value){
+            return value + value;
+        }), '<br>');
+
+    </script>
+
+    <h2>Funktionsreferenzen</h2> 
+
+    
+        <button id="b1">Klick</button>
+        <button id="b2">Klick</button>
+    <script>
+        function meineFunktion(){
+            document.write("<p> Wer einen Fehler gemacht hat...</p>")
+        }
+
+
+        //funktionsreferenz ohne klammern
+        document.getElementById("b1").onclick = meineFunktion;
+
+        document.getElementById("b2").onclick = function(){
+            document.write(quadrat(6));
+        };
+    </script>
+
+    <h2>Closures (Einschlüsse/Kapselungen)</h2>
+
+    <script>
+        function aussen(){
+            let a=3; 
+
+            document.write( "<h3> Verdoppeln der werte: ");
+
+            //hier kommt Closure
+            function innen1(){
+                innen2();
+                document.write(a);
+            }
+
+            function innen2(){
+                a *= 2;
+            }
+            
+            innen1();
+            document.write("</h3>");
+        }
+
+        aussen();
+
+       /*  innen1(); geht nicht weil nur innerhalb von aussen definiert */
+
+       /* document.write("<p> Der wert von a ist..." " </p>" );  geht auch nicht, variable a auch nur innerhalb gültig*/
+
+    </script>
+
+    <h2>vordefinierte Funtionen</h2>
+
+    <script>
+
+        var a="50";
+        var b="5.6abc";
+
+        document.write( '<p> a= "', a, '"; b = "', b, '";</p>');
+        document.write('<p>c = a + b </br>');
+            /* zwei zeichenketten werden aneinander gefügt */
+        document.write('c = ', a+b, '</p>');
+
+
+        document.write('<p>c = parseint(a) + parsefloat(b) <br>');
+        document.write('c = ' , parseInt(a) + parseFloat(b), '</p>');
+
+        document.write('<p>c = parsefloat(a) + parseint(b) <br>');
+        document.write('c = ' , parseFloat(a) + parseInt(b), '</p>');
+
+    </script>
+
+
+</body>
+</html>
