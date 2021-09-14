@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Objekte</title>
+</head>
+<body>
+    <h1>String-Objekte</h1>
+
+<script>
+
+    var zitat1= 'Sein oder nicht sein,';
+    var zitat2= 'das ist hier die Frage.';
+
+    
+    document.write(
+        '<p> zitat1 = '+ zitat1 + '<br>'
+            +'zitat2 = '  + zitat2 + '<br>'
+            +'zitat1.lenght = ' + zitat1.length +' Zeichen</br>' 
+            +'zitat1.charAt(6) = ' + zitat1.charCodeAt(6) +'</br>' 
+            +'zitat1.concat(zitat2) = ' + zitat1.concat(zitat2) + '<br>'
+            +'zitat1.indexOf("c") = ' + zitat1.indexOf('c') + '<br>'
+            +'zitat1.lastIndexOf("e") = ' + zitat1.lastIndexOf('e') + '<br>'
+            +'zitat1.slice(5,9)= '  + zitat1.slice(5,9) + '<br>'
+            +'zitat1.split(" ")= '+ zitat1.split(" ") + '<br>'
+            +'zitat1.substr(5,4)= ' + zitat1.substr(5,4) + '<br>'
+            +'zitat1.substring(5,9)= ' + zitat1.substring(5,9) + '<br>'
+            +'zitat1.toLowerCase()= ' + zitat1.toLowerCase() + '<br>'
+            +'zitat1.toUpperCase()= ' + zitat1.toUpperCase() + '<br>'
+
+    );
+</script>
+
+
+</body>
+</html>

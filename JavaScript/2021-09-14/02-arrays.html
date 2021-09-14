@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Objekte</title>
+</head>
+<body>
+    <h1>Array-Objekte</h1>
+
+    <script>
+
+        var feld= [100, 'Müller', true, 23.6];
+
+        feld.push ('Meier');
+        feld[2]=false;
+        feld[42] = 'Das ultimative Ergebnis';
+        console.log(feld);
+
+
+        //Array über json erzeugen
+
+        var kapitaen={
+            name:'Kirk',
+            vorname:'James'
+        }
+
+        console.log(kapitaen['name'], kapitaen.vorname);
+    </script>
+</body>
+</html>

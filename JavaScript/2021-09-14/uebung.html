@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung Tag 2</title>
+</head>
+<body>
+<h1>Aufgabe 1</h1>
+    <script>
+        function Raumschiff(  schiffsname, schiffsmodell, kapitaen ){
+            //Eigenschaften (Properties)
+            this.name= schiffsname;
+            this.modell= schiffsmodell;
+            this.kapitaen= kapitaen;
+            this.entfernung=10;
+            // Funktionalität (Methoden)
+            this.entfernen=function(lichtjahre){
+                this.entfernung += lichtjahre;
+                document.write(this.name + "===> aktuelle Reise" + lichtjahre + "Lichtjahre ===> Erdentfernung: " + this.entfernung + "Lichtjahre</br>");
+            }
+
+            this.zurueck=function(lichtjahre){
+                this.entfernung -= lichtjahre;
+                if(this.entfernung > 0) { 
+                    document.write('U.S.S. Enterprice kommt zurück zur Erde: nur noch', this.entfernung, 'Lichtjahre');
+                } else if (this.entfernung === 0){
+                    document.write('Willkommen zu Hause auf der Erde, U.S.S. Enterprice!');
+    
+                } else { 
+                    document.write('U.S.S. Enterprice ist bereits auf der Erde gelandet!');
+                    this.entfernung=0;
+                }   
+            }
+        }
+
+        function Person( p_name, p_vorname, geschlecht,lebensform){
+            this.name = p_name;
+            this.vorname=p_vorname;
+            this.geschlecht=geschlecht;
+            this.lebensform=lebensform;
+
+
+        }
+
+        
+
+        var Enterprice = new Raumschiff("U.S.S. >Enterprice", "NCC-1701");
+
+         Enterprice.zurueck(5);
+         document.write('<br>');
+         Enterprice.zurueck(5); 
+         document.write('<br>');
+         Enterprice.zurueck(5); 
+         document.write('<br>');
+         document.write('<br>');
+
+         Enterprice.entfernen(300);
+         document.write('<br>');
+         
+         Enterprice.zurueck(5);
+         document.write('<br>');
+         Enterprice.zurueck(5); 
+         document.write('<br>');
+         Enterprice.zurueck(290); 
+        
+
+    </script>
+
+    <h1>Aufgabe 2</h1>
+    <script>
+        var Jane= new Person( "Jane", "Krissi", "weiblich", "Mensch");
+        
+        var Voyager = new Raumschiff( "U.S.S. Voyager", "NCC-74656", Jane);
+
+        function getProperties(fromObject){
+            document.write("<h4> Die Eigenschaften der ", fromObject.name, ":</h4><ul>");
+                	
+                for(e in fromObject){
+                   console.log(typeof(fromObject[e]));
+
+                   //Wenn die EIgenschaft 'object' ist:
+                   if(typeof(fromObject[e])=== 'object'){
+                        //Schreibe ein neues List-item
+                        
+                        document.write('<li>');
+                            document.write(e, ' (', typeof(fromObject[e]), '):<br>');
+                            //rekursiver Aufruf der Funktion
+                            getProperties(fromObject[e]);
+                        document.write('</li>') ;  
+                           
+
+                   } else if(typeof(fromObject[e]) !== 'function'){
+                       document.write('<li>', e, ':', fromObject[e], '</li>');
+                   }
+                }
+
+                document.write("</ul>")
+        }
+
+        getProperties(Voyager);
+    </script>
+
+    <h1>Aufgabe 3
+    </h1>
+
+    <script>
+
+    for (i=1; i<=10; i++){
+    Voyager.entfernen(10);
+    }
+
+    </script>
+    
+</body>
+</html>

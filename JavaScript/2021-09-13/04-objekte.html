@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte</title>
+</head>
+<body>
+    <h1>Objekte</h1>
+
+    <script>
+
+        //Objekt Raumschiff anlegen
+
+        function Raumschiff(  schiffsname, schiffsmodell, kapitaen ){
+
+            //Eigenschaften (Properties)
+
+            this.name= schiffsname;
+            this.modell= schiffsmodell;
+            this.kapitaen= kapitaen;
+            this.entfernung=0;
+
+            // Funktionalität (Methoden)
+
+            this.entfernen=function(lichtjahre){
+                this.entfernung += lichtjahre;
+                document.write(this.name + "===> aktuelle Reise" + lichtjahre + "Lichtjahre ===> Erdentfernung: " + this.entfernung + "Lichtjahre</br>");
+            }
+        }
+
+        function Person( p_name, p_vorname, geschlecht,lebensform){
+            this.name = p_name;
+            this.vorname=p_vorname;
+            this.geschlecht=geschlecht;
+            this.lebensform=lebensform;
+
+
+        }
+
+        var Kirk= new Person( "Kirk", "James", "männlich", "Mensch");
+
+
+        var Enterprice = new Raumschiff("U.S.S. >Enterprice", "NCC-1701", Kirk);
+
+        var Janeway = new Person("Janeway", "Kathrin", "weiblich", "Mensch");
+
+        var Voyager = new Raumschiff( "U.S.S. Voyager", "NCC-74656", Janeway);
+
+        console.log(Enterprice);
+
+        document.write('<p> Typ der Variablen "Enterprice":' +typeof(Enterprice)+  '</p>');
+
+        document.write('<p>', Enterprice.name, ', Modell:', Enterprice.modell,'<br>'); 
+            document.write('Kapitän:', Enterprice.kapitaen.name, ',', Enterprice.kapitaen.vorname, '.</p>' );
+        
+        document.write('<p>', Voyager.name, ', Modell:', Voyager.modell, '<br>');
+            document.write('Kapitän:', Voyager.kapitaen.name, ',', Voyager.kapitaen.vorname, '.</p>' );    
+
+
+        var Spock = {
+            name:"Spock",
+            dienstgrad: "Commander",
+            lebensform:"Vulcanier"
+        };
+
+
+        document.write(' <p> Beide Rauschiffe sind von der Erde gestartet: <br>');
+            Enterprice.entfernen(50);
+            Voyager.entfernen(180);
+            Enterprice.entfernen(200);
+            Voyager.entfernen(-50);
+            Enterprice.entfernen(-100);
+            Voyager.entfernen(40);
+            Enterprice.entfernen(-150);
+            Voyager.entfernen(-180);
+
+            document.write('</br>');
+
+            document.write('<p>', Spock.name, ', Dienstgrad:', Spock.dienstgrad, '</p>');
+
+    </script>
+
+</body>
+</html>

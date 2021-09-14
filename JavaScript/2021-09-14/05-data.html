@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Objekte</title>
+</head>
+<body>
+    <h1>Data-Objekte</h1>
+
+    <script>
+
+        var aktzeit = new Date();
+        var zeit1 = new Date('March 23, 2020 14:25:56');
+        var zeit2 = new Date(2020, 2, 23, 14, 25, 56 );
+
+        console.log(aktzeit);
+        console.log(zeit1);
+        console.log(zeit2);
+
+        document.write(
+            'Datum, Uhrzeit: ' + aktzeit.toLocaleString() + '<br>'
+            +'Jahr: '  + aktzeit.getFullYear() + '<br>'
+            + 'Monat: ' + aktzeit.getMonth() + '<br>'
+            + 'Tag: ' + aktzeit.getUTCDate() + '<br>'
+            + 'Wochentag: ' + aktzeit.getUTCDay() + '<br>'
+            + 'Stunden: ' + aktzeit.getUTCHours() + '<br>'
+            + 'Minuten: ' + aktzeit.getUTCMinutes() + '<br>'
+            + 'Sekunden: ' + aktzeit.getUTCSeconds() + '<br>'
+            + 'Greenwich: ' + aktzeit.toGMTString() + '<br>'
+            + 'Locale: ' + aktzeit.toLocaleString() + '<br>'
+            + 'Abweichung: ' + aktzeit.getTimezoneOffset() + '<br>'
+        );
+
+
+        var dann= aktzeit.getTime() + (150*24*60*60*1000);
+        console.log(dann);
+
+        zeit1.setTime(dann);
+        document.write(' in 150 Tagen ist der ' + zeit1.toLocaleString());
+    </script>
+</body>
+</html>
