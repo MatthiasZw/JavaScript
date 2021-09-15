@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Event-Handler</title>
+
+    <script>
+
+        function ausgabe(a){
+            document.querySelector('#info').innerHTML = a;
+
+        }
+
+    </script>
+</head>
+<body>
+   <h1>HTML-Event-Handler</h1> 
+   <h2>Veraltete Methode zur Ereignisbehandlung</h2>
+
+<button>Klick Mich</button>
+
+<p><img onmouseover="ausgabe('Maus über dem Bild');" onmouseout="ausgabe('');" src="../images/b1.jpg" alt="schönes bild"></p>
+
+<div id="info"></div>
+
+</body>
+</html>

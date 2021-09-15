@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Objekt</title>
+</head>
+<body>
+    <script>
+
+        var test = document.getElementById("absatz");
+        console.log(test);
+
+    </script>
+
+
+        <h1>Document-Objekt</h1>
+
+        <p id="absatz"> Hier <strong>ist ein Absatz</strong>.</p>
+        <img>
+        <div id="ausgabe"></div>
+        <p>Welch' wunderbares Wetter wir wieder wünschen.</p>
+    
+        <script>
+
+        var test = document.getElementById("absatz");
+        console.log(test);
+
+            /* Die EIgenschaft inner text wird von browsern sehr unterschiedlich interpretiert
+            --> problematisch */
+
+        var absatz_text = absatz.innerText;
+        console.log(absatz_text);
+
+        var absatz_html = absatz.innerHTML;
+        console.log(absatz_html);
+
+        absatz.innerHTML = "Das ist der <i>neue</i> Absatz";
+
+        var absaetze = document.getElementsByTagName('p');
+        console.log(absaetze);
+
+        absaetze[1].innerHTML = "Wetter wird wieder wunderbar."
+
+        var ausgabe = document.querySelector('#ausgabe');
+        ausgabe.innerHTML = absatz_html; 
+
+        var elem= document.querySelectorAll('p');
+        console.log(elem);
+
+        var bild = document.images[0];
+        bild.width='320';
+        bild.height='240';
+        bild.src = '../images/b1.jpg';
+        console.log(bild);
+       
+
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen-Objekt</title>
+</head>
+<body>
+    <h1>Das <code>screen</code>-objekt</h1>
+
+    <div id="ausgabe"></div>
+
+    <script>
+        var ausgabe= "Breite und Höhe des Bildschirms mit with und height:  ";
+
+        ausgabe += screen.width + ' x ' + screen.height + '<br>';
+
+        ausgabe += 'sichtbare Breite und Höhe mit availWith und availHeight:  ';
+
+        ausgabe += screen.availWidth + ' x ' + screen.availHeight + '<br>';
+
+        ausgabe += 'Farbtiefe mit colorDepth:  ';
+
+        ausgabe += screen.colorDepth + ' Bit'+'<br>';
+
+        ausgabe += "Farbauflösung mit pixelDepth:  ";
+        
+        ausgabe+= screen.pixelDepth + ' Bit pro Pixel' + '<br>';
+
+        document.querySelector('#ausgabe').innerHTML = ausgabe;
+
+    </script>
+</body>
+</html>

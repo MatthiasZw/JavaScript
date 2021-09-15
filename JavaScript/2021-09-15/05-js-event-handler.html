@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event-Handler</title>
+</head>
+<body>
+    <h1>JavaScript Event-Handler</h1>
+    <div id="ausgabe"></div>
+
+    <script>
+
+        function init(){
+            document.images[0].src = '../images/b1.jpg';
+            document.querySelector('#b1').onmouseover= 
+            function(){
+                document.images[0].src = '../images/b3.jpg';
+            }
+            document.querySelector('#b1').onmouseout= 
+            function(){
+                document.images[0].src = '../images/b1.jpg';
+            }  
+            
+            document.images[1].src = '../images/b2.jpg';
+            document.querySelector('#b2').onmouseover= 
+            function(){
+                document.images[1].src = '../images/b1.jpg';
+            }
+            document.querySelector('#b2').onmouseout= 
+            function(){
+                document.images[1].src = '../images/b2.jpg';
+            }
+        }
+
+
+
+        window.onload= init;
+
+
+    </script>
+
+    <p>Bilder:</p>
+    <img id="b1">
+    <br>
+    <img id="b2">
+</body>
+</html>

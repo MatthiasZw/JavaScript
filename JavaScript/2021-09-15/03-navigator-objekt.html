@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Navigator-Objekt</title>
+</head>
+<body>
+    <h1>Das <code>Navigator</code>-Objekt</h1>
+
+    <div id="ausgabe"></div>
+
+    <script>
+
+        //Welche Eigenschaften verfügbar sind und welche werte sie liefern 
+        /*  ist u.u. browserabhängig */
+
+        var ausgabe = "";
+
+        for(eigenschaft in navigator) {
+            ausgabe += ' <b> ' + eigenschaft + ':</b>' + navigator[eigenschaft] + '<br>';
+
+        }
+
+        document.querySelector('#ausgabe').innerHTML = ausgabe;
+
+    </script>
+
+</body>
+</html>

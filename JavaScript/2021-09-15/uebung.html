@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="spruch-des-tages.js" type="text/javascript"></script>
+    <title>ÜbungStrings</title>
+</head>
+<body>
+    <h1>Aufgabe 1</h1>
+
+    <h2>Teil 1</h2>
+    <script>
+
+        var string1= 'Hällo, Hällo, Güdbey, Servös, Servös';
+
+        var len= string1.length;
+
+        document.write(string1 +'<br>');
+
+        function change(){
+           
+         for (i=0; i<= string1.length; i++){  
+        string1 = string1.replace("ä", "ae");
+        string1 = string1.replace("ö", "oe");
+        string1 = string1.replace("ü", "ue");
+         } 
+       
+         return string1;
+            }
+    change(string1);
+    document.write(string1);
+
+
+
+    </script>
+    <h2>Teil 2</h2>
+
+    <script>
+
+
+
+    </script>
+
+    <h1>Aufgabe 2</h1>
+ 
+    <script>
+
+    function spruch(){
+    var zufall= Math.random() * 10;
+                console.log(zufall);            
+                document.write( Weisheiten[(Math.floor(zufall))]);
+    };
+
+    spruch();
+
+
+    </script>
+
+    <h1>Aufgabe 3</h1>
+
+
+    <script>
+
+        function zeigeZeit(){
+
+            var aktzeit = new Date();
+
+            document.title= aktzeit.toLocaleString().slice(-9);
+
+            setTimeout("zeigeZeit()", 1000);
+        }
+        zeigeZeit();
+        
+
+    </script>
+
+    
+</body>
+</html>

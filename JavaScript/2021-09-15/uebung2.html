@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung Händler</title>
+</head>
+<body>
+    <h1>Übung Händler</h1>
+
+    <h2>Aufgabe 1</h2>
+<script>
+    
+        function zeigeGrossesBild(a){
+            
+            document.querySelector('#gross').src= a;
+    
+        };
+
+        function zeigeInfo(b){
+            document.querySelector('#info').innerHTML=b;
+
+            setTimeout("zeigeInfo()", 1000);
+        }
+    
+</script>
+
+    <table>
+        <tr>
+            <td><img src="../images/b1.jpg" onclick="zeigeGrossesBild('../images/b1.jpg'); zeigeInfo('Schönes Bild!')"  alt="bild1"></td>
+            <td><img src="../images/b2.jpg" onclick="zeigeGrossesBild('../images/b2.jpg'); zeigeInfo('Auch ein schönes Bild.')"  alt="bild2"></td>
+
+        </tr> <tr>
+            <td><img src="../images/b3.jpg" onclick="zeigeGrossesBild('../images/b3.jpg'); zeigeInfo('Nicht ganz so schön.')"  alt="bild3"></td>
+            <td><img src="../images/blau.jpg" onclick="zeigeGrossesBild('../images/blau.jpg'); zeigeInfo('Recht blau.')"  alt="bild4"></td>
+
+        </tr>
+
+    </table>
+    
+    <div id="info"></div>
+    <img id="gross" >
+ <script>
+        var bild = document.images[0];
+            bild.width='40';
+            bild.height='40';
+            
+            var bild1 = document.images[1];
+            bild1.width='40';
+            bild1.height='40';
+
+            var bild2 = document.images[2];
+            bild2.width='40';
+            bild2.height='40';
+
+            var bild3 = document.images[3];
+            bild3.width='40';
+            bild3.height='40';
+
+            var bild4 = document.images[4];
+            bild4.width='400';
+            bild4.height='400';
+           
+    </script>
+
+   
+
+</body>
+</html>
