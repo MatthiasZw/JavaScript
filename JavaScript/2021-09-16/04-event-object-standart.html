@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastaturauswertung und Standard-Modell</title>
+</head>
+<body>
+    <h1>Tastaturauswertung und Standard-Modell</h1>
+
+    <p>Drücken Sie eine beliebeige Taste</p>
+
+    <div id="antwort"></div>
+
+    <script>
+        var antwort = document.querySelector('#antwort');
+
+        window.onkeypress = function(evt){
+            antwort.innerHTML = "Gedrückter tastaturcode:" + evt.which;
+            /* bei Mausereignissen liefert which die Taste (1 = links, 2= mitte, 3= rechts), 
+            bei Tastatur Ascii */
+        };
+
+    </script>
+</body>
+</html>

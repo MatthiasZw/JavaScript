@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung</title>
+</head>
+<body>
+    <h1>Übung Maus</h1>
+
+    <div id="maus"></div>
+    <div id="po"></div>
+
+    <script>
+
+var mouse = document.querySelector('#maus');
+var po = document.querySelector('#po');
+
+window.onmouseup = function(evt){
+    mouse.innerHTML = "Gedrückter tastaturcode:" + evt.which;
+    /* bei Mausereignissen liefert which die Taste (1 = links, 2= mitte, 3= rechts), 
+    bei Tastatur Ascii */
+};
+
+function pos(evt){
+
+    for (i in evt){
+        let inf = '';
+        inf += i + ': ' + evt[i] + '<br>';
+        console.log(i); /* ............ */
+    }
+}
+
+
+
+document.onmouseup = pos();
+
+    </script>
+</body>
+</html>

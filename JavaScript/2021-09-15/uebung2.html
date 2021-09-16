@@ -12,35 +12,36 @@
     <h2>Aufgabe 1</h2>
 <script>
     
-        function zeigeGrossesBild(a){
-            
+        function zeigeGrossesBild(a){ 
             document.querySelector('#gross').src= a;
-    
         };
 
         function zeigeInfo(b){
             document.querySelector('#info').innerHTML=b;
 
-            setTimeout("zeigeInfo()", 1000);
+            var to= prompt("Anzeigedauer in Sekunden angeben (1-20) angeben", 1);
+
+            while (to > 20){
+                to = prompt("Zu lange, bitte Anzeigedauer in Sekunden (1-20) angeben", 1);
+            }
+
+            setTimeout(function() {document.querySelector('#info').textContent=''}, to*1000);
         }
     
 </script>
-
     <table>
         <tr>
             <td><img src="../images/b1.jpg" onclick="zeigeGrossesBild('../images/b1.jpg'); zeigeInfo('Schönes Bild!')"  alt="bild1"></td>
             <td><img src="../images/b2.jpg" onclick="zeigeGrossesBild('../images/b2.jpg'); zeigeInfo('Auch ein schönes Bild.')"  alt="bild2"></td>
-
         </tr> <tr>
             <td><img src="../images/b3.jpg" onclick="zeigeGrossesBild('../images/b3.jpg'); zeigeInfo('Nicht ganz so schön.')"  alt="bild3"></td>
             <td><img src="../images/blau.jpg" onclick="zeigeGrossesBild('../images/blau.jpg'); zeigeInfo('Recht blau.')"  alt="bild4"></td>
-
         </tr>
-
     </table>
     
     <div id="info"></div>
     <img id="gross" >
+
  <script>
         var bild = document.images[0];
             bild.width='40';
@@ -63,8 +64,5 @@
             bild4.height='400';
            
     </script>
-
-   
-
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Zugriff auf Formulare</title>
+</head>
+<body>
+    
+    <h1>DOM-Zugriff auf Formulare</h1>
+
+    <form>
+        <input>
+        <input>
+        <input>
+    </form>
+
+    <div id="ausgabe"></div>
+    <button>Klick Mich!</button>
+
+
+    <script>
+
+     function inhalt(){
+        let ausgabe = document.querySelector('#ausgabe');
+
+        ausgabe.innerHTML = document.querySelectorAll('input')[0].value;
+
+        ausgabe.innerHTML += '<br>' + document.forms[0].elements[1].value;
+
+        ausgabe.innerHTML += '<br>' + document.forms[0][2].value;
+
+     }
+
+     function init (){
+        document.querySelector('button').onclick = inhalt;
+     }       
+
+
+    window.onload= init;
+
+
+
+    </script>
+</body>
+</html>

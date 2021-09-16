@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Listener</title>
+
+    <style>
+        p{
+            padding: 10px;
+            width: 50%;
+            border: 1px solid orange;
+        }
+
+        div{
+            padding: 10px;
+            border: 1px solid green;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Event-Listener</h1>
+
+    <div id="section">
+        <p id="absatz">
+            <button id="klick">Klick Mich!</button>        
+        </p>
+    </div>
+    
+    <div id="ausg"></div>
+
+    <script>
+
+        var sektion = document.querySelector('#section');
+        var absatz = document.querySelector('#absatz');
+        var klick = document.querySelector('#klick');
+        var ausg = document.querySelector('#ausg');
+
+
+        klick.addEventListener('click', function(){
+            ausg.innerHTML += "auf den Button wurde geklickt.<br>";
+
+        }, true);
+
+        absatz.addEventListener('click', function(){
+            ausg.innerHTML += "auf den Absatz wurde geklickt.<br>";
+
+        }, false);
+
+        sektion.addEventListener('click', function(){
+            ausg.innerHTML += "auf die Sektion wurde geklickt.<br>";
+
+        }, true);
+
+    </script>
+</body>
+</html>

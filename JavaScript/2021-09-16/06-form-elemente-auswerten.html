@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular-Elemente auswerten</title>
+</head>
+<body>
+    <h1>Formular-Elemente auswerten</h1>
+
+    <form>
+        Name: <input type="text" name="username" size="40"><br>
+        Herr: <input type="radio" name="a" value="mann">
+        Frau: <input type="radio" name="a" value="frau"><br>
+        <input type="checkbox" name="werbung" value="news"> Newsletter abonnieren<br>
+        <select name="ticket" id="t">
+            <option value="e" id="er">Erwachsener</option>
+            <option value="k" id="ki">Kind</option>
+            <option value="f" id="fa">Familie</option>
+        </select>
+        Tag der Veranstaltung: <input type="date" name="tag">
+        AGB gelesen? <input type="checkbox" name="agb">
+    </form>
+    <br>
+    <button id="b1">Eingabe prüfen</button>
+    <button>Absenden</button>
+    <button>Zurücksetzen</button>
+    <div id="ausgabe"></div>
+
+    <script src="06-form-elemente.js"></script>
+</body>
+</html>
