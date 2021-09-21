@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eltern-Elemente-Filter</title>
+
+    <style>
+        .green{
+            color: #009933;
+            background-color: #e2ffec;
+        }
+
+        .box-color-0{
+            background-color: #84a4bdd8;
+        }
+
+        .box-color-1{
+            background-color: #acbd84d8;
+        }
+
+        .box-color-2{
+            background-color: #bd8484d8;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Eltern-Elemente-Filter</h1>
+
+
+    <div id="box">
+        <p>Absatz 1</p>
+        <p>Absatz 2</p>
+        <p>Absatz 3</p>
+    </div>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+    <script>
+        // Finde alle Absätze innerhalb des Elements mit der ID box
+        var elem= $('#box').find('p');
+        elem.click(function(){
+            // Index des angeklickten Elements speichern
+            let idx = elem.index(this);
+            //alle Klassen  angeklickten Element...
+           elem.removeClass() 
+           .parent().removeClass(); //und vom Elternelement entfernen
+        
+            $(this).addClass('green') // klasse green dem angklickte element hinzufügen 
+            .parent().addClass('box-color-' + idx); // klasse box-color dem eltern div in abhängigkeit vom angklickten element (p) hinzufügen
+
+        });
+
+
+
+
+    </script>
+</body>
+</html>

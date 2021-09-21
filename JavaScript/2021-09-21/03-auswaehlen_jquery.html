@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery</title>
+  <style>
+    body {
+      width: 80%;
+      margin: 1em auto;
+      padding: 2%;
+      font-family: sans-serif;
+      box-shadow: 2px 2px 10px #333;
+      border-radius: 5%;
+    }
+    nav ul li {
+      padding-right: 2%;
+    }
+    article aside {
+      float: left;
+      width: 20%;
+      background: #ddd;
+      padding: 2%;
+      margin-right: 2%;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<header id="page_header">
+  <h1>Beispiel</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Neue Beiträge</a></li>
+      <li><a href="#">Archiv</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="inhalt">
+    <article class="beitrag">
+      <header>
+        <h2>Post 1</h2>
+        <p>von Minna Maus
+        </p>
+      </header>
+      <aside>
+        <p>
+          Hier kommt der Aside-Text
+        </p>
+      </aside>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+      <p>
+        Noch ein Absatz: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+      <footer>
+        <p><a href="#">zu den Kommentaren</a></p>
+      </footer>
+    </article>
+    <article class="beitrag">
+      <header>
+        <h2>Post 2</h2>
+        <p>von Nina Nils
+        </p>
+      </header>
+      <aside>
+        <p>
+          Hier kommt der Aside-Text
+        </p>
+      </aside>
+      <p><a href="http://www.video2brain.de" title="Externer Link">Video2brain</a>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+      <p>
+        Noch ein Absatz: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+      <footer>
+        <p><a href="#">zu den Kommentaren</a></p>
+      </footer>
+    </article>
+  </section>
+  <aside id="seite">
+    <h3>Archiv</h3>
+    <ul>
+      <li><a href="#" title="Artikel vom Januar">Januar 2016</a></li>
+      <li><a href="#" title="Artikel vom Februar">Februar 2016</a></li>
+      <li><a href="#" title="Artikel vom März">März 2016</a></li>
+      <li><a href="#" title="Artikel vom April">April 2016</a></li>
+      <li><a href="#" title="Weitere Artikel">Mehr</a></li>
+    </ul>
+    <form>
+      <label>Name:</label><input type="text" name="name"><br>
+      <label>Passwort</label><input type="password" name="passwort">
+      <input type="submit" value="abschicken">
+    </form>
+  </aside>
+</main>
+<footer id="seitenfuss">
+  <p>Copyright 2016</p>
+  <nav>
+    <ul>
+      <li><a href="#">Startseite</a></li>
+      <li><a href="#">Über uns</a>
+        <ul>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Geschichte</a></li>
+          <li><a href="#">Partner</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">AGB</a></li>
+      <li></li>
+    </ul>
+  </nav>
+</footer>
+<script src="../jquery/jquery-3-6-0.js"></script>
+<script>
+  /* Alle Links mit title-Attribut grün färben */
+
+    $('a[title]').css('color','green');
+
+
+  /* alle Input-Elemente mit type=text */
+
+  $('input[type=text]').css('background','#a00');
+
+  /* JEDES 2. li wird selektiert */
+  $('li:nth-child(2)').css('color','orange');
+
+  /* NUR das 2. li wird selektiert */
+  
+  $('li:eq(1)').css('background','rgba(0,0,153,0.5)');
+  /*  Folge-Elemente von allen headern selektieren */
+
+  $('header').next().css('color', '#909');
+
+  /* nur das folge elment vom ersten header  */
+
+  $('header').first().next().css('color', '#aaa');
+</script>
+</body>
+</html>
+

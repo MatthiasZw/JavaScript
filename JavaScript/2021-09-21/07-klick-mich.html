@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klick mich!</title>
+</head>
+<body>
+    <h1>Klick mich!</h1>
+    <button class="button">Klick mIch</button>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+        $('.button').on({
+            click: function(){
+                console.log('geklickt');
+            }, 
+            mouseover: function(){
+                    console.log('mausover');
+                    setTimeout(function(){ 
+
+                    let pos = $('button').position();
+                    console.log(pos);   
+                    if(pos.left > 1 && pos.top >1){ 
+                            $('button')
+                        .css({
+                            position:'relative',
+                            top: pos.top + 30,
+                            left: pos.left + 30
+                        });};
+                },400);
+            }
+        });
+
+    </script>
+</body>
+</html>

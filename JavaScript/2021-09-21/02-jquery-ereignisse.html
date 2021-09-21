@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Reagieren auf Ereignisse</title>
+</head>
+<body>
+    <h1>jQuery - Reagieren auf Ereignisse</h1>
+
+
+    <input type="text" name="eingabe">
+    <button id="add">ergänzen</button>
+
+    <ul>
+        <li>Eins</li>
+        <li>Zwei</li>
+    </ul>
+
+    <button id="fade">Ein- und Ausblenden</button>
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+        /* Text aus dem Textfeld der Liste hinzufügen */
+
+        /* 1. Klick Ereignis vom add-Button abfangen */
+
+        $('#add').on('click', function(){
+            // 2. Inhalt des Textfeldes auslesen
+            let eingabe = $('input[name = eingabe]').val();
+
+            //3.Text als List-Item an die Liste anhängen
+
+            $('ul').append('<li>' + eingabe + '</li>');
+        });
+
+        /* Überscrift einblenden */
+
+        // 1. Klick -Ereigbnis vom Fade Button
+
+        $('#fade').click(function(){
+
+            /* Chaining */
+           /*  $('h1').hide().fadeIn(4000).fadeOut(4000); */
+
+
+                // Shorthand-Variante
+                $('h1').toggle(4000);
+        })
+
+        });
+    </script>
+</body>
+</html>

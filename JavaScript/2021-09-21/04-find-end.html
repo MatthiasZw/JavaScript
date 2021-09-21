@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Filter(find, end)</title>
+</head>
+<body>
+    <h1>jQuery Filter(find, end)</h1>
+
+    <ul id="eins">
+        <li class="a">Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li class="b">Eintrag 3</li>
+        <li><span class="b">Klasse b</span></b></li>
+    </ul>
+    <ul id="zwei">
+        <li class="a">Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li class="b">Eintrag 3</li>
+    </ul>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+    <script>
+
+        $('ul')
+            .find('li')
+            .css('color', '#a00')
+            .end() // beendet den ersten Filter um einen neuen zu setzen
+            .find('.b')
+            .css('background', '#00a');
+
+    </script>
+</body>
+</html>
