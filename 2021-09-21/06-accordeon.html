@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+
+    * {margin: 0;
+        padding: 0;
+    }
+
+    html{
+        font-family: sans-serif;
+    }
+
+    p, h2{margin: 1rem;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div id="inhalt">
+        <h1>FAQ</h1>
+    
+        <h2>Lorem Ipsum</h2>
+        <div class="antwort">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia veniam, rerum ex dolor natus eos modi voluptatem optio placeat neque error molestiae totam laboriosam nobis, quo ipsa! Voluptatum, autem libero.</p>
+        </div>
+        <h2>Quod veniam</h2>
+        <div class="antwort">
+            <p>Architecto accusamus omnis repellendus! Suscipit voluptas, illo laudantium magni ut assumenda recusandae laborum placeat? Quas sint praesentium, harum laboriosam repellendus ea atque nulla rem eum animi tenetur facilis tempore voluptas.</p>
+        </div>
+        <h2>Accusantium</h2>
+        <div class="antwort">
+            <p>Nisi nam consequuntur corrupti ad excepturi, impedit adipisci explicabo magnam, laborum, incidunt ea praesentium. Consectetur, maiores vel? Provident illo, explicabo natus fuga ipsam inventore nam, impedit suscipit, excepturi ullam dicta.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima asperiores, et libero cupiditate voluptatum, sunt at consequuntur repellendus delectus quia numquam consectetur quis magni ipsa natus fugiat earum corporis illum.</p>
+                <p>Blanditiis sint quibusdam velit voluptatem tenetur incidunt quo iure. Inventore explicabo, laboriosam animi nemo porro, quae ullam doloribus, iure iusto veritatis cupiditate obcaecati corrupti unde alias atque velit at natus.</p>
+            </div>
+        </div>
+        <h2>Dolor iusto</h2>
+        <div class="antwort">
+            <p>Consectetur obcaecati aperiam et deleniti autem explicabo dolores cumque vero similique nam fugiat, corrupti amet magni, non perferendis illo eius! Quis, rerum molestiae est ipsam commodi modi dignissimos quia eum!</p>
+        </div>
+        <h2>Facere animi</h2>
+        <div class="antwort">
+            <p>Sequi, ratione ipsa tenetur, veniam iste sit reprehenderit consequatur voluptates qui architecto molestias voluptatibus ducimus ex commodi! Obcaecati totam illum nulla quam consequatur distinctio reiciendis explicabo nihil, fugit sed alias.</p>
+        </div>
+        <h2>Laborum adipisci</h2>
+        <div class="antwort">
+            <p>Quod natus eligendi harum ab voluptates odio sed nobis unde illo officiis. Veniam deleniti asperiores iste vel eum, pariatur ducimus iure ex, cum in labore temporibus a non animi distinctio.</p>
+        </div>
+    </div>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+$('.antwort').hide();
+
+$('h2')
+        .click(function(){
+            $(this).next().toggle();
+        }).css('cursor', 'pointer');
+
+    </script>
+</body>
+</html>

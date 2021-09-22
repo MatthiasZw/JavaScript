@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klick mich!</title>
+    <style>
+        #ausgabe{
+            height: 1rem;
+            width: 2rem;
+            border: 1px solid greenyellow;
+            text-align: center;
+            padding: 20px;
+            margin: 0 0 20px 20px;
+        }
+        #score{
+            padding: 0  20px 0 20px;
+
+
+        }
+        #button{
+            margin: 0  20px 0 20px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Klick mich!</h1>
+    <h2 id="score">Score</h2>
+    <div id="ausgabe"></div>
+    <button id="button" class="button">Klick mIch</button>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+
+         var score=0;
+
+        $('.button').on({
+            click: function(){
+                console.log('geklickt');
+                document.querySelector('#ausgabe').innerHTML = score += 1;
+            }, 
+            mouseover: function(){
+                    console.log('mausover');
+                    setTimeout(function(){ 
+
+                    let pos = $('button').position();
+                    console.log(pos);   
+                    switch(true){ 
+                        case (pos.top < 500 ):
+                            switch (true){
+                                case (pos.left >= 200):
+                                $('button')
+                                .css({
+                                    position:'relative',
+                                    left: pos.left - 100,
+                                    top: pos.top +30
+                                });break;
+                                case (pos.left <= 200):
+                                $('button')
+                                .css({
+                                    position:'relative',
+                                    left: pos.left  +150
+                                    
+                                });break;
+                        }break;
+                        
+                        case (pos.top >= 500 ):
+                       $('button')
+                        .css({
+                            position:'relative',
+                            top: pos.top - 300,
+                            left: pos.left - 50
+                        });break;
+                    };
+                },400);
+            }
+        });
+
+    </script>
+</body>
+</html>
+
+<!-- pos.left > 1 && pos.top >1
+
+pos.left > 100 || pos.top >100 -->
