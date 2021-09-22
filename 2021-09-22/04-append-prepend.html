@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append- prepend - after- before</title>
+</head>
+<body>
+    <h1>append- prepend - after- before</h1>
+    <h2>Noch eine Überschrift</h2>
+
+    <nav>
+        <ul>
+            <li>Eisn</li>
+            <li>Zwie</li>
+            <li>Drie</li>
+        </ul>
+    </nav>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+
+        /* append() fügt nach dem Inhalt hinzu */
+        $('nav').append('append');
+        
+        /* prepend() fügt nach dem Inhalt hinzu */
+        $('nav').prepend('prepend');
+        
+        /* after() fügt nach dem Inhalt hinzu */
+        $('nav').after('after');
+        
+        /* before() fügt nach dem Inhalt hinzu */
+        $('nav').before('before');
+
+        /* Element hinter ein anderes Element verschieben */
+
+
+
+        $('nav').after($('h1'));
+
+        /* Element kopieren und Hinter anderes einsetzen */
+
+        $('h2').clone().insertAfter($('nav'));
+
+        /* selektierte elemente entfernen */
+
+        $('h1').remove();
+
+        /* alternative methoden */
+
+        //append() ert wohin
+        //appendTo erst was dann wohin
+
+        $('<p>ergänzt</p>').appendTo('nav');
+
+    </script>
+</body>
+</html>

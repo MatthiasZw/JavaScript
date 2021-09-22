@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+button{
+    margin: 5px;
+}
+
+#theonlyone{
+    color: indigo;
+    background: lawngreen;
+}
+
+    </style>
+</head>
+<body>
+    <h1>ereignisse entfernen mit off</h1>
+    <button id="theonlyone">Tue nichts</button>
+    <button id="bind">Ereignis hinzufügen</button>
+    <button id="unbind">Ereignis entfernen</button>
+    <div style="display:none;">Klick</div>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+
+        function zeige() {
+            $('div').show().fadeOut('slow');
+        }
+
+        $('#bind').click(function(){
+            $('body')
+            .on('click', '#theonlyone', zeige )
+            .find('#theonlyone')
+            .text('Ich tue etwas');
+        });
+ $('#unbind').click(function(){
+            $('body')
+            .off('click', '#theonlyone', zeige )
+            .find('#theonlyone')
+            .text('Ich tue wieder nichts');
+        });
+
+    </script>
+
+</body>
+</html>

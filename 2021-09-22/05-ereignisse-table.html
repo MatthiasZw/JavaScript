@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ereignis delegierung</title>
+</head>
+<body>
+    <h1>ereignis delegierung</h1>
+    <table id="dataTable">
+        <tbody>
+            <tr>
+                <td>Text 1</td>
+                <td>Text 2</td>
+            </tr>
+            <tr>
+                <td>Text 3</td>
+                <td>Text 4</td>
+            </tr>
+            <tr>
+                <td>Text 5</td>
+                <td>Text 6</td>
+            </tr>
+            <tr>
+                <td>Text 7</td>
+                <td>Text 8</td>
+            </tr>
+            <tr>
+                <td>Text 9</td>
+                <td>Text 0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+
+    <script>
+/* Dieser code bindet das ereignis an JEDE zeile */
+     /*    $('#dataTable tbody tr').on('click', function (){
+            console.log($(this).text());
+        }); */
+
+/* dieser code bindet das ereignis an nur das tbody element und es musss
+nur an das geklickte element delegiert werden */
+        $('#dataTable tbody').on('click', 'tr', function (){
+            console.log($(this).text());
+        });
+
+
+
+
+    </script>
+</body>
+</html>

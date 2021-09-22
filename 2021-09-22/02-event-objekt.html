@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ereignis steuern</title>     
+</head>
+<body>
+    <h1>Ereignis steuern</h1>       
+
+    <div id="bereich"><a href="https://www.iad.de">Zur IAD Webseite</a></div>
+
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+    <script>
+
+        $('a').click(function(evt){
+            console.log('auf den Link geklickt');
+            evt.preventDefault(); // deaktiviert Standard-Ereignisbehandlung
+            evt.stopPropagation(); //deaktiviert die bubble-phase
+
+        });
+
+        $('#bereich').click(function(){
+            console.log('auf das div wurde geklickt');
+        })
+
+    </script>
+</body>
+</html>

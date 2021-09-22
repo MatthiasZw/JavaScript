@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anzahl von Zeichen begrenzen</title>
+    <style>
+        label{
+            display:block;  }
+        p{font-size: small;}
+        .warnung {background-color: #fdf38e;}
+        .warnung + p {color: #a00;}
+    </style>
+</head>
+<body>
+    <h1>Anzahl von Zeichen begrenzen</h1>
+    <label for="eingabe">Ihre Nachricht</label>
+    <textarea name="eingabe" id="eingabe" cols="50" rows="10"></textarea>
+    <p id="zeichen"></p>
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+    <script>
+
+        var maxSigns = 50;
+        // standard-text zum absatz hinzufügen
+        $('#zeichen').html('Sie haben noch <b>' + maxSigns +'</b> von <b>' + maxSigns + '</b> Zeichen übrig');
+
+        //Keyup ereignis abfangen
+
+        $('#eingabe').on('keyup', function(){
+            //Berechnung von Zeichen noch übrig
+            // max Anzahl abzüglich anz. Zeichen in Textarea
+            let aktuell = maxSigns - $(this).val().length;
+
+            //Absatz Text anpassen
+            $('#zeichen').html('Sie haben noch <b>' + aktuell +'</b> von <b>' + maxSigns + '</b> Zeichen übrig');
+
+            // Klasse Warnung hinzufügen oder entfernen
+            if(aktuell <0){
+                $(this).addClass('warnung');
+            } else {
+                $(this).removeClass('warnung');
+            }
+        });
+
+    </script>
+</body>
+</html>
