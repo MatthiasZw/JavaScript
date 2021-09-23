@@ -59,26 +59,36 @@ td{
 
 var displ;
 var temp;
+var add1 = 0;
 
 
     function nummer(a){
     var temp=a;
     console.log(temp);
     document.querySelector('#ausgabe').innerHTML += temp;
-    console.log(document.querySelector('#ausgabe').innerHTML);
+    
+    /* console.log(document.querySelector('#ausgabe').innerHTML); */
+    
     }
 
-    function plus(temp){
-      var add1=  document.querySelector('#ausgabe').innerHTML;
+    function plus(){
+      add1+=  parseFloat(document.querySelector('#ausgabe').innerHTML);
       console.log(add1);
-      document.querySelector('#ausgabe').innerHTML = '' ; /* funtioniert bis hier? */
+      document.querySelector('#ausgabe').innerHTML = '' ;
+      
+        /* funtioniert bis hier? */
+    
       
     }
 
- /*    function equ(){
-        document.querySelector('#ausgabe').innerHTML= ;
+    function equ(){
 
-    } */
+    add1= document.querySelector('#ausgabe').innerHTML;
+    console.log(add1);
+    
+    /* document.querySelector('#ausgabe').innerHTML = add1;
+ */
+    }
 
 </script>
 
@@ -104,8 +114,8 @@ var temp;
         <tr>
             <td id="c"><button id="ce" onclick="nummer('c')">C</button></td>
             <td><button id="nu" onclick="nummer(0)">0</button ></td>
-            <td id="eq"><button id="equ" onclick="equ()">=</button></td>
-            <td id="pl"><button id="plu" onclick="plus()">+</button></td>
+            <td id="eq"><button id="equ" onclick="equ('=')">=</button></td>
+            <td id="pl"><button id="plu" onclick="nummer('+')">+</button></td>
         </tr>
     </table>
 

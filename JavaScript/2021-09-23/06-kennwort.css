@@ -1,0 +1,11 @@
+body{
+    font-family: sans-serif;
+    color: #333;
+}
+
+#progbar{
+
+    display:block;
+    height: 20px;
+    width: 0;
+}
