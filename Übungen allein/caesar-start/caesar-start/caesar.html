@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Cäsar-Verschlüsselung</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/caesar-jquery.js"></script>
+    <style>
+        .ausgabe {margin-top: 0;}
+        button {margin-top: 0.5rem;}
+        #encrypted {background: #aea;}
+    </style>
+</head>
+<body>
+    <h1>Texte mit der Cäsar-Verschlüsselung verschlüsseln</h1>
+   
+    <div id="eingabe">
+        <label for="text">Geben Sie den zu verschlüsselnden Begriff ein:</label><br>
+        <input type="text" id="text"><br>
+        <label for="code">Geben Sie an um wieviel Zeichen der Text verschoben werden soll:</label><br>
+        <input type="code" id="code"><br>
+        <button id="encrypt">Verschlüsseln</button>
+    </div>
+    <div>
+        <p>Zur Kontrolle: ASCII-Code des Original-Textes</p>
+        <div class="ausgabe" id="ascii"></div>
+    </div>
+    <div>
+        <p>Zur Kontrolle: ASCII-Code des codierten Textes</p>
+        <div class="ausgabe" id="asciiPlus"></div>
+    </div>
+    <div>
+        <p>Verschlüsselte Ausgabe</p>
+        <div class="ausgabe" id="encrypted"></div>
+    </div>
+       
+   
+   
+   
+    
+</body>
+</html>

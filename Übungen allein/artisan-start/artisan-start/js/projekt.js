@@ -1,0 +1,1 @@
+/* artisan projekt.js */

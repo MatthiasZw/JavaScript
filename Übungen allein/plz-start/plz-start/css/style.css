@@ -1,0 +1,33 @@
+body {
+	font-family: sans-serif;
+}
+main {
+	margin: 10px auto;
+	width: 80%;
+}
+
+/* === CSS für die Ausgabe-Tabelle === */
+table.ergebnis {
+	background: rgba( 91, 200, 255, .5 );
+	border-collapse: collapse;
+}
+table.ergebnis tr:nth-child(odd) {
+    background-color: #e4ebf2 ;
+}
+table.ergebnis td.ort {
+	padding: 2px 5px;
+	min-width: 70px;
+}
+table.ergebnis td.plz {
+	padding: 2px 5px;
+	min-width: 50px;
+}
+table.ergebnis td.bl {
+	padding: 2px 5px;
+	min-width: 100px;
+}
+
+/* === Klasse für evtl. ausgegebene Fehlermeldungen === */
+.error-msg {
+	color: #a00;
+}
