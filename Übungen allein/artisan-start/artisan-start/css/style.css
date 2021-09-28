@@ -8,3 +8,134 @@ html, * {
 body {
     font-family: sans-serif;
 }
+
+#dose{
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    padding: 5px;
+}
+
+#topnavigation{
+    width: 425px;
+    height: 105px;
+    background-color: #cccccc;
+    float: left;
+}
+
+#topbutton1 {
+    background-color: rgb(148, 100, 100);
+    height: 85px;
+    width: 75px;
+    margin-right: 15px;
+    float: left;
+}
+#topbutton2 {
+    background-color: rgb(41, 61, 238);
+    height: 85px;
+    width: 75px;
+    margin-right: 15px;
+    float: left;
+}
+#topbutton3 {
+    background-color: rgb(88, 226, 95);
+    height: 85px;
+    width: 75px;
+    margin-right: 15px;
+    float: left;
+}
+#topbutton4 {
+    background-color: rgb(241, 88, 190);
+    height: 85px;
+    width: 75px;
+    margin-right: 15px;
+    float: left;
+}
+
+#logo{
+    height: 105px;
+    width: 275px;
+    background-color: aqua;
+    float: right;
+}
+
+#teaserbox{
+    height: 275px;
+    width: 740px;
+    padding: 5px;
+    margin-top: 125px;
+    background-color: rgb(241, 216, 72);
+}
+#currentimage{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(155, 150, 150);
+}
+
+#teaserbutton1{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(27, 201, 245);
+    float: right;
+    margin: 3px;
+    margin-right: 0;
+    margin-top: -25px;
+    position: relative;
+}
+
+#teaserbutton2{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(165, 27, 245);
+    float: right;
+    margin: 3px;
+    margin-right: 0;
+    margin-top: -25px;
+    position: relative;
+}
+
+#teaserbutton3{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(231, 245, 27);
+    float: right;
+    margin: 3px;
+    margin-right: 0;
+    margin-top: -25px;
+    position: relative;
+}
+
+
+#teaserbutton4{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(27, 245, 92);
+    float: right;
+    margin: 3px;
+    margin-right: 0;
+    margin-top: -25px;
+    position: relative;
+}
+
+#teaserbutton5{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(245, 158, 27);
+    float: right;
+    margin: 3px;
+    margin-right: 0;
+    margin-top: -25px;
+    position: relative;
+}
+
+.mouseovertopbutton
+{
+background-color: #000000 !important;
+color: #ffffff;
+}
+
+.activatedtopbutton
+{
+background-color: red !important;
+color: #ffffff;
+}
