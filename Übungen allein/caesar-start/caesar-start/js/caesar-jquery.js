@@ -5,6 +5,10 @@ var ausgabe1= new Array;
 
 function encrypt(){
 
+    var ausgabe=[];
+    var ausgabe0=[];
+    var ausgabe1=[];
+
     eingabe= $('#text').val();
     versch= $('#code').val();
 
