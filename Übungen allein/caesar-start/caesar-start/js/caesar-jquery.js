@@ -16,8 +16,8 @@ function encrypt(){
         
         ausgabe [i] = (eingabe.charCodeAt(i) + parseInt(versch));
 
-        if(ausgabe [i] >= 255){
-            ausgabe [i] = ausgabe [i] - 223;
+        if(ausgabe [i] >= 127){
+            ausgabe [i] = ausgabe [i] - 94;
         }
 
         ausgabe0 [i] = (eingabe.charCodeAt(i));
@@ -31,10 +31,14 @@ function encrypt(){
     $('#encrypted').html(ausgabe1);
     console.log(ausgabe);
 
+   
+
+
+
 }
 
 function init(){
-
+ 
     document.querySelector('#encrypt').onclick = encrypt;
 
 }
