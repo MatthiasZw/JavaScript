@@ -1,0 +1,19 @@
+button{
+    margin: 5px;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    background-color: rgba(37, 207, 212, 0.603);
+    text-align: center;
+    margin: 5px;
+
+    
+}
+
+.wrap{
+width: 360px;    
+display: flex;
+flex-wrap: wrap;
+}

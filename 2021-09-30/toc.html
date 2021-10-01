@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<!--
+  AUFGABE
+	Erzeugen Sie automatisch ein Inhaltsverzeichnis, indem Sie die Überschriften
+  einsammeln und einen entsprechenden <nav> Block zusammenbauen.
+
+  Sie müssen auch IDs bei den Überschriftselementen einfügen.
+
+  Skript ist unten im <body>
+-->
+
+<html>
+  <head>
+    <title>Inhaltsverzeichnis (jQuery-Übung)</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <nav>
+      <div id="toc" >
+       
+    </div>
+
+    </nav>
+
+
+    <h1>Meine Thesis</h1>
+
+    
+
+    <h2>1 Einleitung</h2>
+
+    <h3>1.1 State of the Foo</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    <h3>1.2 State of the Bar</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    <h2>2 Hauptteil</h2>
+
+    <h3>2.1 Foo-System</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    <h3>2.2 Bar-Komponente</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    <h2>3 Konklusion</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+	<!-- Hier jQuery einbinden -->
+    <script src="../jQuery/jquery-3-6-0.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+      h2= $('h2, h3');
+      console.log(h2);
+      
+      $('nav').prepend('<h1>' + 'Inhalt' + '</h1>' )
+
+      $(h2).attr('id', function(index){ return "link" + index});
+
+      $('#toc').append('<ul>'  );
+
+      for (i=0; i<h2.length; i++){
+
+      $('#toc').append('<li>'+ '<a href="'+'#'+ h2[i].id +'">' + h2[i].innerHTML  +'</a>'+ '</li>');
+      };
+
+      $('#toc').append('</ul>'  );
+});
+    </script>
+  </body>
+</html>
