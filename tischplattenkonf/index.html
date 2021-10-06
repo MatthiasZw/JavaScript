@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischplattenkonfigurator</title>
+    <link rel="stylesheet" href="css/tisch.css">
+    <script src=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/tisch.js"></script>
+</head>
+<body>
+    <h1>Tischplattenkonfigurator mit Preisberechnung</h1>
+
+    <div id="wrap">
+       
+            <label for="laenge">Länge in cm, max 450</label>
+            <input type="number" name="laenge">
+            
+            <label for="breite">Breite in cm , max 180</label>
+            <input type="number" name="breite">
+            
+            <table>
+                <h4>Stärke in cm</h4>
+                <th></th>
+                <tr>
+                    <td>
+                         <label for="staerke">2,5</label>
+                         <input type="radio" name="staerke" checked>
+                    </td>
+                    <td>
+                         <label for="staerke">3</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                     <td>
+                         <label for="staerke">4</label>
+                         <input type="radio" name="staerke">
+                    </td>
+           
+                </tr>
+                <tr>
+                    <td>
+                         <label for="staerke">5</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                    <td>
+                         <label for="staerke">6</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                    <td>
+                         <label for="staerke">7</label>
+                         <input type="radio" name="staerke">
+                    </td>
+           
+                </tr>
+                <tr>
+                    <td>
+                         <label for="staerke">8</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                    <td>
+                         <label for="staerke">9</label>
+                         <input type="radio" name="staerke">
+                    </td> 
+                    <td>
+                         <label for="staerke">10</label>
+                         <input type="radio" name="staerke">
+                    </td>
+           
+                </tr>
+                <tr>
+                    <td>
+                         <label for="staerke">11</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                    <td>
+                         <label for="staerke">12</label>
+                         <input type="radio" name="staerke">
+                    </td>
+                    <td>
+                         
+                    </td>
+           
+                </tr>
+               
+            </table>
+
+            <h4>Äste auffüllen?</h4>
+            <table>
+                <tr>
+                    <td>
+                        <label for="auf">Ja</label>
+                        <input type="radio" name="auf" checked>
+                    </td>
+                    <td>
+                        <label for="nein">Nein</label>
+                        <input type="radio" name="auf">
+                    </td>
+                </tr>
+            </table>
+
+            <h4>Varianten</h4>
+            <table id="variant">
+                <th>Form</th>
+                <th>Rissanteil</th>
+                <th>Farbe</th>
+                <th>Mattlack</th>
+                <tr>
+                    <td>
+                        <label for="auf">Gerade Kante</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        <label for="nein">Leichter Rissanteil</label>
+                        <input type="radio" name="auf">
+                    </td><td>
+                        <label for="auf">Natura</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        <label for="nein">Hartöl</label>
+                        <input type="radio" name="auf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Facettenkante</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        <label for="nein">Normaler Rissanteil</label>
+                        <input type="radio" name="auf">
+                    </td><td>
+                        <label for="auf">Alte Eiche</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        <label for="nein">Mattlack</label>
+                        <input type="radio" name="auf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Mit Baumkante</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        <label for="nein">Reine Balken Außenseiten</label>
+                        <input type="radio" name="auf" checked>
+                    </td> <td>
+                        <label for="auf">Eiche dunkel</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+
+                    </td>
+                    
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="auf">Durchgängige Bohlen</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td> 
+                    <td>
+                        <label for="auf">Hellgrau geölt</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Mit Querfries</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <label for="auf">Dunkelgrau geölt</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Rund</label>
+                        <input type="radio" name="auf">
+                    </td>
+                    <td>
+                        
+                    </td> <td>
+                        <label for="auf">Weiß geölt</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Oval</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td> 
+                    <td>
+                        <label for="auf">Weiß gekälkt</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Schiffsbodenmuster</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+                       
+                    </td> 
+                    <td>
+
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Flechtenmuster</label>
+                        <input type="radio" name="auf">
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="auf">Rautenmuster</label>
+                        <input type="radio" name="auf" >
+                    </td>
+                    <td>
+
+                    </td><td>
+                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                
+
+            </table>
+
+
+    </div>
+    
+</body>
+</html>
