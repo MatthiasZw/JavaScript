@@ -1,0 +1,5 @@
+1. lädt db-connect.php wo die Verbindungskennung zum mySQL-Server in $con gespeichert wird
+2. $sql wird die Suche zugewiesen: aus "Items" werden diejenigen ausgwewählt die bei 'isbn' mit der durch die Ajax-Anfrage ($_GET['isbn']) übertragenen Nummer übereinstimmen
+3. $result wird die SQL-Anfrage zugewiesen (Verbindungskennung und Suche)
+4. Vom SQL-Server wird mit den vorher festgelegten Kriterien ein Array angefragt und in $detailArray gespeichert
+5. $detailArray wird über Ajax an an das Javascript zurück gegeben

@@ -1,0 +1,27 @@
+/* CSS für books */
+
+#wrap{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-content: space-between;
+    margin-left: 10px;;
+}
+#ausgabe{
+    
+    width: 50%;
+    padding: 15px;
+    align-content: flex-start;
+}
+/* table{
+  
+    background-color: rgba(29, 248, 58, 0.164);
+} */
+/* th, td{
+    border: 1px solid rgb(63, 63, 63);
+} */
+button{
+    background-color: rgba(0, 255, 255, 0.26);
+    border-radius: 10px;
+    border-color: blueviolet;
+}
