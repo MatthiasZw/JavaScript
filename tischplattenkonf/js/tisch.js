@@ -68,7 +68,7 @@ $(document).ready(function(){
             $('#br').val(null);
             } //if 
             else {
-                $('#aus').html('Fehler');
+                $('#aus').html('Größe ändern');
             }
 
         } catch(e){
