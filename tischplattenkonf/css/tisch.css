@@ -16,26 +16,29 @@ table{
     width: 350px;
 }
 td {
-    text-align: right;
+    text-align: left;
     border: 1px solid rgb(0, 0, 0);
     
 }
 #variant{
     width: 900px;
-    text-align: center;
     border: 1px solid rgb(27, 26, 26);
 }
 
 #variant  td{
+   text-align: left;
     border: 1px solid rgb(0, 0, 0);
+   
 }
 
 h1{
     color: rgb(92, 179, 255);
+    text-decoration:underline;
 }
 
 h3{
     color: rgba(92, 179, 255, 0.829);
+    text-decoration:underline;
 }
 
 #main{
@@ -72,4 +75,15 @@ h3{
 }
 #test{
     display: flex;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+   
 }

@@ -74,9 +74,7 @@ $(document).ready(function(){
         } catch(e){
             $('#aus').html('Fehler');
         } // try
-
-           
-           
+ 
         }); //button.click
 
 }); //doc.ready
