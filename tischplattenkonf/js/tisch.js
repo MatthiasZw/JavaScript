@@ -4,8 +4,11 @@ $(document).ready(function(){
             let m2 = 0;
             let m3= 0;
  
+            try { if ($('#la').val() <= 450 && $('#br').val() <= 180){
+               
+            
             m2= ($('#la').val() * $('#br').val())/10000;
-
+                
           
 
             if($('input[name="auf"]:checked').val()== 0 ){
@@ -60,8 +63,20 @@ $(document).ready(function(){
                     $('#aus').html('Fehler');
             }
 
-            $('#aus').html(m2);
+            $('#aus').html(m2.toFixed(2) + '  &#8364;');
+            $('#la').val(null);
+            $('#br').val(null);
+            } //if 
+            else {
+                $('#aus').html('Fehler');
+            }
 
-        });
+        } catch(e){
+            $('#aus').html('Fehler');
+        } // try
 
-});
+           
+           
+        }); //button.click
+
+}); //doc.ready
