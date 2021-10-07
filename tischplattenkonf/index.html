@@ -16,10 +16,10 @@
     <div id="wrap">
        
             <label for="laenge">Länge in cm, max 450</label>
-            <input type="number" name="laenge" id="la">
+            <input type="number" name="laenge" id="la" max="450">
             
             <label for="breite">Breite in cm , max 180</label>
-            <input type="number" name="breite" id="br">
+            <input type="number" name="breite" id="br" max="180">
             <h3>Stärke in cm</h3>
 <div id="wrap2">
     
@@ -30,53 +30,53 @@
                         <tr>
                             <td>
                                  <label for="staerke">2,5</label>
-                                 <input type="radio" name="staerke" checked>
+                                 <input type="radio" name="staerke"  value="0" checked>
                             </td>
                             <td>
                                  <label for="staerke">3</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="1">
                             </td>
                              <td>
                                  <label for="staerke">4</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="2">
                             </td>
                         </tr>
                         <tr>
                             <td>
                                  <label for="staerke">5</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="3">
                             </td>
                             <td>
                                  <label for="staerke">6</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="4">
                             </td>
                             <td>
                                  <label for="staerke">7</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="5">
                             </td>
                         </tr>
                         <tr>
                             <td>
                                  <label for="staerke">8</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="6">
                             </td>
                             <td>
                                  <label for="staerke">9</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="7">
                             </td>
                             <td>
                                  <label for="staerke">10</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="8">
                             </td>
                         </tr>
                         <tr>
                             <td>
                                  <label for="staerke">11</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="9">
                             </td>
                             <td>
                                  <label for="staerke">12</label>
-                                 <input type="radio" name="staerke">
+                                 <input type="radio" name="staerke" value="10">
                             </td>
                             <td>
     
@@ -98,11 +98,11 @@
                         <tr>
                             <td>
                                 <label for="auf">Ja</label>
-                                <input type="radio" name="auf" checked>
+                                <input type="radio" name="auf" value ="0" checked>
                             </td>
                             <td>
                                 <label for="nein">Nein</label>
-                                <input type="radio" name="auf">
+                                <input type="radio" name="auf" value="1">
                             </td>
                         </tr>
                     </table>
@@ -120,7 +120,7 @@
                                 </td>
                                 <td>
                                     <label for="nein">Leichter Rissanteil</label>
-                                    <input type="radio" name="ri">
+                                    <input type="radio" name="ri" value="0">
                                 </td><td>
                                     <label for="auf">Natura</label>
                                     <input type="radio" name="fa" >
@@ -137,7 +137,7 @@
                                 </td>
                                 <td>
                                     <label for="nein">Normaler Rissanteil</label>
-                                    <input type="radio" name="ri">
+                                    <input type="radio" name="ri" value="1">
                                 </td><td>
                                     <label for="auf">Alte Eiche</label>
                                     <input type="radio" name="fa" >
@@ -154,7 +154,7 @@
                                 </td>
                                 <td>
                                     <label for="nein">Reine Balken Außenseiten</label>
-                                    <input type="radio" name="ri" checked>
+                                    <input type="radio" name="ri"  value="2" checked>
                                 </td> <td>
                                     <label for="auf">Eiche dunkel</label>
                                     <input type="radio" name="fa" >
