@@ -21,7 +21,7 @@ $(document).ready(function(){
                 m3= m3 + 71.40;
                 }
 
-            let st = $('input[name="staerke"]:checked').val();
+            let st = $('select').val();
             
             switch (st)
                {
